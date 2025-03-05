@@ -1,0 +1,43 @@
+.newsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px 0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Daha iyi bir gölge efekti
+
+    h2 {
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 5px; // Başlık ve içerik arasında boşluk
+    }
+
+    .newsContent {
+        width: 100%;
+        display: flex;
+        flex-direction: column; // Makaleleri dikey olarak yerleştir
+        align-items: center;
+
+        .newsArticle {
+            width: 80%; // Daha dar bir genişlik
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Makale için de bir gölge
+            border-radius: 8px; // Kenarları yuvarlat
+            background-color: #fff; // Makale arka plan rengi
+
+            h4 {
+                text-align: center;
+                font-size: 17px;
+                margin-bottom: 10px; // Altında biraz boşluk
+            }
+
+            p {
+                text-align: center;
+                font-size: 14px; // İçerik için biraz daha küçük font
+            }
+        }
+    }
+}

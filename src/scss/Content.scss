@@ -1,0 +1,252 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.contentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: 'Arial', sans-serif;
+        font-size: 2.5rem;
+        position: relative;
+    }
+
+    h1::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        width: 20%;
+        height: 3px;
+        background-color: #05131d;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+    }
+
+    .cardsContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Daha iyi bir gölge efekti
+
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        @media (min-width: 769px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+
+    .textContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 40px;
+        background-color: transparent;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Daha iyi bir gölge efekti
+
+
+        .textContent {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+
+            h1 {
+                position: relative;
+                color: #05131d;
+                font-size: 2rem;
+                margin-bottom: 10px;
+                padding-bottom: 8px;
+                font-weight: bold;
+                text-align: start;
+
+            }
+
+            h1::after {
+                content: '';
+                position: absolute;
+                left: 15%;
+                bottom: 0;
+                width: 30%;
+                height: 3px;
+                background-color: #011b40;
+                transition: width 0.3s ease;
+            }
+
+            p {
+                color: #555;
+                line-height: 1.6;
+                margin-bottom: 15px;
+                text-align: start;
+                padding: 0 10px;
+            }
+        }
+
+        .animationBox {
+            width: 100%;
+            height: 370px;
+            background-image: url('../assets/Ekran_görüntüsü_2025-03-05_011224-removebg-preview.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @media (max-width: 768px) {
+                height: 250px;
+            }
+        }
+    }
+
+    .barMenu {
+        width: 100%;
+        background-color: white;
+        top: 10%;
+        position: absolute;
+        animation: identifier 0.7s forwards alternate;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+
+        .barNavBox {
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            width: 100%;
+            flex-direction: column;
+            padding: 5px;
+            height: 84vh;
+
+
+            a {
+                text-align: start;
+                color: black;
+                text-decoration: none;
+                margin: 5px;
+                font-size: 20px;
+            }
+        }
+        .barasBox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #05131d;
+            padding: 15px;
+
+            p{
+                color: white;
+            }
+        }
+    }
+
+    @keyframes identifier {
+        0% {
+            transform: translateY(-3%);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .contentContainer {
+
+        .cardsContainer {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 20px;
+            width: 100%;
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+            justify-content: start;
+        }
+
+        .textContainer {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 40px;
+
+
+
+            .textContent {
+                width: 100%;
+                max-width: 600px; // Maksimum genişlik
+                padding: 10px 20px 20px 0;
+                margin: 0;
+                background-color: rgba(255, 255, 255, 0.089);
+
+                h1 {
+                    position: relative;
+                    color: #05131d;
+                    font-size: 1rem;
+                    margin-bottom: 10px;
+                    padding-bottom: 8px;
+                    font-weight: bold;
+                    text-align: start;
+                    padding: 0 10px;
+                }
+
+                h1::after {
+                    content: '';
+                    position: absolute;
+                    left: 14%;
+                    bottom: -3.5px;
+                    width: 23%;
+                    height: 2px;
+                    background-color: #011b40;
+                    transition: width 0.3s ease;
+                }
+
+                p {
+                    color: black;
+                    line-height: 1.2;
+                    margin-bottom: 15px;
+                    text-align: start;
+                    font-size: 15px;
+                }
+            }
+
+            .animationBox {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    background-image: url('../assets/main\ background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+
+    .header_box {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        background-color: #51aee7;
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin-left: 15px;
+        }
+
+        .links_box {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+                margin: 0 20px;
+            }
+        }
+
+        .icons_box {
+            .search_icon {
+                color: white;
+                font-size: 40px;
+            }
+
+            .menuIcon {
+                color: white;
+                font-size: 40px;
+                display: none;
+            }
+        }
+
+
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .newsBox {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+
+        .header_box {
+            justify-content: space-between;
+            height: 90px;
+            background-color: #4d72e0;
+
+            img {
+                width: 120px;
+                height: 140px;
+                object-fit: cover;
+                margin-right: 90px;
+
+            }
+
+            .links_box {
+                display: none;
+            }
+
+            .icons_box {
+                width: 100px;
+                display: flex;
+                margin-right: 15px;
+                justify-content: end;
+                align-items: center;
+                
+
+
+                .menuIcon {
+                    display: flex;
+                    font-size: 2rem;
+                    margin: 0 5px;
+                }
+
+                .search_icon {
+                    font-size: 2rem;
+                    margin: 0 5px;
+
+                }
+            }
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .footer {
+            width: 100%;
+        }
+    }
+}
