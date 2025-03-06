@@ -1,0 +1,191 @@
+.containerHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header_box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        background-color: #51aee7;
+        padding: 0 15px;
+        overflow: hidden;
+
+        img {
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .links_box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+                margin: 0 15px;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #f0f0f0;
+                }
+            }
+        }
+
+        .icons_box {
+            display: flex;
+            align-items: center;
+
+            .search_icon {
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+                margin-left: 15px;
+            }
+
+            .menuIcon {
+                color: white;
+                font-size: 30px;
+                cursor: pointer;
+                margin-left: 15px;
+                display: none;
+            }
+        }
+    }
+
+    .searchContainer {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+        background-color: #51aee7;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        .searchTagsBox {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+
+            .searchInput {
+                flex: 0.97;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                margin-right: 10px;
+                transition: border 0.3s; // Odaklanma etkisi için geçiş ekledik
+
+                &:focus {
+                    border-color: #51aee7; // Odaklandığında mavi renge geçiş
+                    outline: none; // Varsayılan odak çerçevesini kaldır
+                }
+            }
+
+            .searchButton {
+                padding: 10px 15px; // Butonun yatay dolgusunu artırdık
+                background-color: #51aee7;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s; // Geçiş efekti ekledik
+                border: 0.9px solid white;
+
+                &:hover {
+                    background-color: #4190c1; // Fare ile üzerine gelindiğinde renkte değişim
+                }
+            }
+        }
+    }
+
+    .barMenu {
+        position: fixed;
+        top: 10%;
+        left: 0;
+        right: 0;
+        background-color: #51aee7;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        border-top: 1px solid white;
+
+        .barNavBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                color: white;
+                margin: 10px 0;
+                text-decoration: none;
+                font-size: 18px;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #f0f0f0;
+                }
+            }
+        }
+
+        .barasBox {
+            text-align: center;
+            margin-top: 10px;
+
+            p {
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .containerHeader {
+        .header_box {
+            background-color: #307dad;
+
+            height: 80px;
+
+            img {
+                width: 120px;
+            }
+
+            .links_box {
+                display: none; // Hide links on mobile 
+            }
+
+            .icons_box {
+
+                .search_icon,
+                .menuIcon {
+                    font-size: 25px;
+                    display: flex;
+                }
+            }
+        }
+
+        .searchContainer {
+            width: 100%;
+        }
+
+        .barMenu {
+            .barNavBox {
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+}
