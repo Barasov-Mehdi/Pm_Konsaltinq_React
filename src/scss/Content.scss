@@ -157,7 +157,8 @@
                 font-size: 20px;
             }
         }
-        .barasBox{
+
+        .barasBox {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -165,11 +166,54 @@
             background-color: #05131d;
             padding: 15px;
 
-            p{
+            p {
                 color: white;
             }
         }
     }
+
+    .searchContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        z-index: 1000;
+
+        .closeButton {
+            cursor: pointer;
+            color: white;
+            align-self: flex-end;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .searchInput {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .searchButton {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+
 
     @keyframes identifier {
         0% {

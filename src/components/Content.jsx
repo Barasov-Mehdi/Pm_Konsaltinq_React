@@ -6,7 +6,7 @@ import Muhasibat from '../assets/Muhasibat.PNG';
 import Mətbəə from '../assets/Mətbəə.PNG';
 import Poliqrafiya from '../assets/Poliqrafiya.PNG';
 
-function Content({ showMenu }) {
+function Content({ showMenu, showSearch, setShowSearch }) {
     const services = [
         { title: 'Vergi', imgSrc: Vergi },
         { title: 'Mühasibat ', imgSrc: Muhasibat },
@@ -14,6 +14,9 @@ function Content({ showMenu }) {
         { title: 'Poliqrafiya', imgSrc: Poliqrafiya },
     ];
 
+    const closeSearchBox = () => {
+        setShowSearch(false)
+    }
 
     return (
         <div className='contentContainer'>
@@ -39,11 +42,13 @@ function Content({ showMenu }) {
             </div>
 
             <h2>Xidmətlərimiz</h2>
-            <div className='cardsContainer'>
-                {services.map((service, index) => (
-                    <Card key={index} title={service.title} imgSrc={service.imgSrc} />
-                ))}
-            </div>
+            <a href="">
+                <div className='cardsContainer'>
+                    {services.map((service, index) => (
+                        <Card key={index} title={service.title} imgSrc={service.imgSrc} />
+                    ))}
+                </div>
+            </a>
 
             {showMenu && ( // showMenu true ise menü gösteriliyor
                 <section className='barMenu'>
@@ -60,6 +65,16 @@ function Content({ showMenu }) {
 
                 </section>
             )}
+
+            {
+                showSearch && (
+                    <section className='searchContainer'>
+                        <p onClick={closeSearchBox} className='closeButton'>X</p>
+                        <input type="text" placeholder="Xidmət Axtar..." className='searchInput' />
+                        <button className='searchButton'>Axtar</button>
+                    </section>
+                )
+            }
 
         </div>
     );

@@ -11,10 +11,15 @@ import { HiMiniXMark } from "react-icons/hi2";
 
 function Main() {
   const [showMenu, setShowMenu] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const showSearchBox = () => {
+    setShowSearch(true)
+  }
 
   return (
     <div className='container' style={{
@@ -33,7 +38,7 @@ function Main() {
         </nav>
 
         <div className='icons_box'>
-          <IoSearchSharp className='search_icon' />
+          <IoSearchSharp className='search_icon' onClick={showSearchBox} />
           {
             showMenu ? (
               <HiMiniXMark className='menuIcon' onClick={toggleMenu} />
@@ -47,7 +52,7 @@ function Main() {
       </header>
 
       <main className='main'>
-        <Content showMenu={showMenu} />
+        <Content showMenu={showMenu} showSearch={showSearch} setShowSearch={setShowSearch} />
       </main>
 
       <section className='newsBox'>
