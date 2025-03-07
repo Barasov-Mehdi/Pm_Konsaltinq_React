@@ -5,15 +5,17 @@
     align-items: center;
     flex-direction: column;
     margin: 25px 0;
-    padding: 20px;
+    padding: 25px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Daha iyi bir gölge efekti
-
-    
+    background-color: #5888ec;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
 
     h2 {
         text-align: center;
         font-size: 22px;
         margin-bottom: 5px; // Başlık ve içerik arasında boşluk
+        color: white;
     }
 
     .newsContent {

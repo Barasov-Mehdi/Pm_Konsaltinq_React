@@ -7,17 +7,19 @@
     .header_box {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         height: 100px;
         background-color: #51aee7;
         padding: 0 15px;
         overflow: hidden;
 
+
         img {
             width: 150px;
             height: auto;
             object-fit: contain;
+            margin-left: 20px;
         }
 
         .links_box {
@@ -154,11 +156,12 @@
     .containerHeader {
         .header_box {
             background-color: #307dad;
-
+            justify-content: space-between;
             height: 80px;
 
             img {
                 width: 120px;
+                margin: 0;
             }
 
             .links_box {

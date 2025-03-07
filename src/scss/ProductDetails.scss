@@ -1,0 +1,81 @@
+.product-details {
+    padding: 40px; // Increased padding for breathing space
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center content horizontally
+    background-color: #f9f9f9; // Light background for contrast
+    min-height: 100vh; // Ensure full height view
+
+    h1 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    div {
+        margin: 20px 0;
+
+        button {
+            background-color: #007bff; // Primary button color
+            color: #fff; // Text color
+            border: none;
+            border-radius: 5px; // Rounded corners
+            padding: 10px 15px;
+            margin: 0 10px; // Margin between buttons
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 110px;
+
+            &:hover {
+                background-color: #0056b3; // Darker shade on hover
+            }
+        }
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        max-width: 1200px;
+        width: 100%; // Full width for responsiveness
+    }
+
+    .product-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Slightly enhanced shadow
+        overflow: hidden;
+        text-align: center;
+        padding: 20px; // Increased padding for better spacing
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Deeper shadow effect on hover
+        }
+
+        img {
+            width: 100%;
+            height: 180px; // Adjusted height for consistency
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px; // Spacing below the image
+        }
+
+        h2 {
+            font-size: 20px; // Slightly larger font size
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .content {
+            font-size: 15px; // Increased font size for readability
+            color: #666;
+            margin: 10px 0 0;
+            line-height: 1.5; // Improved line-height for better readability
+        }
+    }
+}
