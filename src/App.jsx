@@ -7,6 +7,7 @@ import About from './components/About';
 import ProductDetails from './components/ProductDetails';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import React from 'react';
+import ServiceDetails from './components/ServiceDetails';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Content />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
         <Route path='/About' element={<About />} />
+        <Route path='/product/:id' element={<ServiceDetails />} />
       </Routes>
       <NewsPage />
       <Footer />

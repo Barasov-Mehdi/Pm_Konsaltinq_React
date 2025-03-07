@@ -19,7 +19,7 @@ const ProductDetails = () => {
 
     return (
         <div className="product-details">
-            <h3>Xidmetler</h3>
+            <h3>Xidmətlər</h3>
             <div>
                 <button onClick={() => vergiBtn('Vergi xidməti')}>Vergi</button>
                 <button onClick={() => vergiBtn('Mühasibat xidməti')}>Mühasibat</button>
