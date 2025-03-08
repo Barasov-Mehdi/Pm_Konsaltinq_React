@@ -4,7 +4,7 @@ import '../scss/About.scss';
 function About() {
     return (
         <div className="about-container">
-
+            {/* salam */}
             <h1>Haqqımızda</h1>
             <p>
                 Peşəkar Mühasib Konsaltinq MMC mühasibatlıq sahəsində təcrübəli və peşəkar əməkdaşların birlikdə ərsəyə gətirdiyi bir layihədir. Şirkətimiz yarandığı tarixdən bu günədək vergi və mühasibatlıq sahəsində çoxlu sayda uğurlara imza atmışdır.
