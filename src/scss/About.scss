@@ -1,0 +1,25 @@
+// About.scss
+
+.about-container {
+    padding: 20px;
+    background-color: #f9f9f9; // Arxa fon
+    border-radius: 8px; // Künclərin yuvarlaqlaşdırılması
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Kölgə effekti
+    max-width: 800px; // Maksimum eni
+    margin: 20px auto; // Mərkəzə yerləşdirmək
+    font-family: 'Arial', sans-serif; // Şrift
+}
+
+.about-container h1 {
+    font-size: 2rem; // Başlıq ölçüsü
+    color: #333; // Rəng
+    text-align: center; // Mərkəzə yerləşdirmək
+    margin-bottom: 20px; // Altında boşluq
+}
+
+.about-container p {
+    font-size: 1.125rem; // Mətni daha böyük etmək
+    line-height: 1.5; // Sətir hündürlüyü
+    color: #555; // Yazı rəngi
+    margin-bottom: 15px; // Mətni ayırmaq üçün boşluq
+}
