@@ -1,39 +1,34 @@
+// component/ContactUs.jsx
 import React, { useState } from "react";
 import "../scss/ContactUs.scss";
-import { useDispatch, useSelector } from "react-redux";
-import  {postFeedBack}  from '../slices/feedBackSlice'; // Action'ı import et
+import { useDispatch } from "react-redux";
+import { postFeedBack } from '../slices/feedBackSlice'; 
 
 function ContactUs() {
     const dispatch = useDispatch();
-    const feedbacks = useSelector((state) => state.feedback.feedbacks);
 
-    const [ad, setAd] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [tel, setTel] = useState('');
+    const [number, setNumber] = useState('');
     const [message, setMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (!ad || !email || !tel || !message) {
-            alert("Lütfen tüm alanları doldurun.");
-            return;
-        }
+        const feedback = {
+            name,
+            email,
+            number,
+            message,
+        };
 
-        const feedbackData = { ad, email, tel, message };
-        
+        // Redux action'ını çağırıyoruz
         try {
-            await dispatch(postFeedBack(feedbackData)).unwrap();
-            alert("Form başarıyla gönderildi!");
-            
-            // Formu temizle
-            setAd('');
-            setEmail('');
-            setTel('');
-            setMessage('');
+            await dispatch(postFeedBack(feedback));
+            console.log("Feedback başarıyla gönderildi.");
         } catch (error) {
+            console.error("Geri bildirim gönderme hatası:", error.response?.data || error.message);
             alert("Mesaj gönderilirken hata oluştu.");
-            console.error("Feedback gönderme hatası:", error);
         }
     };
 
@@ -54,12 +49,12 @@ function ContactUs() {
                     <p>100 Heydər Əliyev prospekti, Zaqatala</p>
                 </div>
             </div>
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="contact-form">
                 <input
                     type="text"
                     placeholder="Adınız"
-                    value={ad}
-                    onChange={(e) => setAd(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     required
                 />
                 <input
@@ -72,8 +67,8 @@ function ContactUs() {
                 <input
                     type="number"
                     placeholder="Telefon"
-                    value={tel}
-                    onChange={(e) => setTel(e.target.value)}
+                    value={number}
+                    onChange={(e) => setNumber(e.target.value)}
                     required
                 />
                 <textarea
