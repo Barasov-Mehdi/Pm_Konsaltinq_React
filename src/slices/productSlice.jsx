@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const getAllServices = createAsyncThunk('services/getAllServices', async () => {
-    const response = await axios.get('https://jannabperfume-jannabperfume-963b35916771.herokuapp.com/api/products?limit=');
+    const response = await axios.get('https://zaqatalaxidmet-3c2b32e22185.herokuapp.com/services/getAllServices');
     return response.data; 
 });
 
