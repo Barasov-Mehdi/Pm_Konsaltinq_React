@@ -32,7 +32,7 @@ function ServiceDetails() {
                     <Link className='goHome' to='/'>Əsas səhifə</Link>
 
                     <div>
-                        <img src={service.img} alt={service.name} />
+                        <img src={service.image} alt={service.name} />
                     </div>
                     <div>
                         <h2>{service.name}</h2>

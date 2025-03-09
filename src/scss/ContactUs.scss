@@ -79,7 +79,7 @@ $contact-info-color: #007bff;
         font-weight: bold;
 
         &:hover {
-            background: darken($primary-color, 10%);
+            background: $primary-color;
         }
     }
 }
