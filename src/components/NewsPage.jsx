@@ -35,11 +35,11 @@ function NewsPage() {
                                 <h4>{e.content}</h4>
                             </div>
                             <div className='news-author'>
-                                <h4>{e.author}</h4>
+                                <h4>Müəllif: {e.author}</h4>
                             </div>
                             <div className='news-date'>
                                 <h4>
-                                    {new Date(e.date).toLocaleDateString()} - {new Date(e.date).toLocaleTimeString().split(":").slice(0, 2).join(":")}
+                                    Tarix: {new Date(e.date).toLocaleDateString()}
                                 </h4>
                             </div>
                             <div className='news-icon-container'>

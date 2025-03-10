@@ -13,7 +13,8 @@ $contact-info-color: #007bff;
     padding: 30px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: -19px 20px 0px 6px #287aad;
+    border-bottom: 0.9px solid;
 
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -34,6 +35,7 @@ $contact-info-color: #007bff;
             margin-bottom: 5px;
             text-align: start;
         }
+
         p {
             color: $contact-info-color;
             font-weight: bold;

@@ -1,12 +1,8 @@
-// General styling
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #eef2f3; // Changed background color for a softer look
-    margin: 0;
-    padding: 0;
-}
+$primary-color: #287aad;
+$background-light: #ffffff;
+$text-color: #333;
+$hover-color: #ffcc00;
 
-// Container for the NewsList component
 .news-list {
     display: flex;
     justify-content: center;
@@ -16,14 +12,15 @@ body {
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px; // Added border radius to the container
-    background: #fff; // White background for the container
+    box-shadow: 0px 9px 0px 6px #287aad;
+    border-bottom: 0.9px solid; // White background for the container
+    width: 100%;
 
-    
     .loading {
         width: 30px;
         height: 30px;
         object-fit: contain;
-        margin: 70px ;
+        margin: 70px;
 
     }
 
@@ -33,59 +30,130 @@ body {
         border: 1px solid #2c3e50;
         padding: 6px;
         outline: none;
+        margin-left: 30px;
+        border-radius: 10px;
 
-    }
-
-    .select_option:hover {
-        padding: 6px;
-        background-color: rgb(97, 145, 235);
-        color: white;
     }
 
 
     .news-article {
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); // Enhanced shadow for 3D effect
-        margin: 15px 0;
-        padding: 25px; // Increased padding for more space
-        transition: transform 0.3s, box-shadow 0.3s;
+        padding: 20px;
+        margin: 10px 30px;
+        border-radius: 8px;
+        background-color: $background-light;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 20px 0px 6px white;
+        border-bottom: 0.9px solid;
+        border-right: 0.9px solid; // White background for the container
+        border-left: 0.9px solid; // White background for the container
+        margin-bottom: 35px;
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                text-align: center;
+                font-size: 17px;
+                margin-bottom: 10px;
+                color: $text-color;
+                border-bottom: 0.1px solid black;
+                width: auto;
+
+            }
+        }
+
+        .news-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                text-align: left;
+                font-size: 16px;
+                margin-bottom: 10px;
+                color: $text-color;
+
+            }
+        }
+
+        .news-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                text-align: left;
+                font-size: 15px;
+                margin-bottom: 10px;
+                color: $text-color;
+
+            }
+        }
+
+        .news-date {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                text-align: left;
+                font-size: 14px;
+                margin-bottom: 10px;
+                color: $text-color;
+            }
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4 {
+                text-align: left;
+                font-size: 18px;
+                margin-bottom: 10px;
+                color: $text-color;
+            }
+        }
+
+        p {
+            text-align: left;
+            font-size: 14px;
+            color: $text-color;
+        }
+
+        .news-icon-container {
+            position: absolute;
+            left: -70px;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+            transition: left 0.3s ease, opacity 0.3s ease;
+
+
+            .news-icon {
+                font-size: 24px;
+                color: black;
+                background-color: white;
+                border: 50px;
+                padding: 5px;
+            }
+        }
 
         &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); // Hover shadow effect
-        }
+            transform: scale(1.03);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
-        // Header styling
-        .news-header {
-            margin-bottom: 10px;
-
-            h4 {
-                font-size: 1.4em;
-                color: #2c3e50; // Darker color for header
-                font-weight: bold;
-            }
-        }
-
-        // Content styling
-        .news-content {
-            margin-bottom: 10px;
-
-            h4 {
-                font-size: 1.1em;
-                color: #34495e;
-            }
-        }
-
-        // Author and date styling
-        .news-author,
-        .news-date {
-            font-size: 0.9em;
-            color: #7f8c8d; // Softer color for author/date
-            margin-bottom: 5px;
-
-            h4 {
-                margin: 0;
+            .news-icon-container {
+                opacity: 1;
+                /* Make icon visible */
+                left: 20px;
+                /* Slide the icon to the right */
             }
         }
     }

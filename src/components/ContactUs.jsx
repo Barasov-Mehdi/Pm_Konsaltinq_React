@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "../scss/ContactUs.scss";
 import { useDispatch } from "react-redux";
-import { postFeedBack } from '../slices/feedBackSlice'; 
+import { postFeedBack } from '../slices/feedBackSlice';
 
 function ContactUs() {
     const dispatch = useDispatch();
@@ -49,6 +49,7 @@ function ContactUs() {
                     <p>100 Heydər Əliyev prospekti, Zaqatala</p>
                 </div>
             </div>
+
             <form onSubmit={handleSubmit} className="contact-form">
                 <input
                     type="text"
