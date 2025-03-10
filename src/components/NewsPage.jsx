@@ -10,12 +10,6 @@ function NewsPage() {
     const news = useSelector((state) => state.allNews.news);
 
     const [newsPaper, setNewsPaper] = useState([]);
-    const [getTime, setGetTime] = useState(null);
-
-    useEffect(() => {
-        const realTime = new Date();
-        setGetTime(realTime);
-    }, [])
 
     useEffect(() => {
         dispatch(getAllNews());

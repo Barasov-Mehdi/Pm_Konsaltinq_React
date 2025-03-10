@@ -1,5 +1,5 @@
 // Header.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import LOGO_MB from '../assets/LOGO_MB.png';
 import { IoSearchSharp } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
@@ -14,6 +14,7 @@ function Header() {
     const [showSearch, setShowSearch] = useState(false);
     const [searchInp, setSearchInp] = useState('');
     const [serviceArray, setServiceArray] = useState([]);
+    const bottomSectionRef = useRef(null);
 
     const dispatch = useDispatch();
     const services = useSelector((state) => state.products.services)
@@ -44,17 +45,27 @@ function Header() {
         setShowMenu(prev => !prev);
     };
 
+    const closeMenuBox = () => {
+        setShowMenu(false)
+    }
+
+    const scrollToBottom = () => {
+        if (bottomSectionRef.current) {
+            bottomSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        setShowMenu(false)
+    };
 
     return (
         <section className='containerHeader'>
             <header className='header_box'>
                 <img src={LOGO_MB} alt="Logo" />
                 <nav className='links_box'>
-                    <Link to='/'>Əsas səhifə</Link>
-                    <Link to='/About'>Haqqımızda</Link>
-                    <a href="#">Yeniliklər</a>
-                    <a href="#">Xidmətlər</a>
-                    <a href="#">Ünvan</a>
+                    <Link onClick={closeMenuBox} to='/'>Əsas səhifə</Link>
+                    <Link onClick={closeMenuBox} to='/About'>Haqqımızda</Link>
+                    <Link onClick={closeMenuBox} to='/newslist'>Yeniliklər</Link>
+                    <Link onClick={closeMenuBox} to='/ProductDetails'>Xidmətlər</Link>
+                    <Link onClick={scrollToBottom} to='/'>Ünvan</Link>
                 </nav>
                 <div className='icons_box'>
 
@@ -101,11 +112,11 @@ function Header() {
             {showMenu && (
                 <section className='barMenu'>
                     <div className='barNavBox'>
-                        <Link to='/'>Əsas səhifə</Link>
-                        <Link to='/About'>Haqqımızda</Link>
-                        <a href="#">Yeniliklər</a>
-                        <a href="#">Xidmətlər</a>
-                        <a href="#">Ünvan</a>
+                        <Link onClick={closeMenuBox} to='/'>Əsas səhifə</Link>
+                        <Link onClick={closeMenuBox} to='/About'>Haqqımızda</Link>
+                        <Link onClick={closeMenuBox} to='/newslist'>Yeniliklər</Link>
+                        <Link onClick={closeMenuBox} to='/ProductDetails'>Xidmətlər</Link>
+                        <Link onClick={scrollToBottom} to='/'>Ünvan</Link>
                     </div>
                     <div className='barasBox'>
                         <p>BarasSoftWare</p>

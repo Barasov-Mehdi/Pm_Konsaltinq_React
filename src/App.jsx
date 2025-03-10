@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
-import NewsPage from './components/NewsPage';
+// import NewsPage from './components/NewsPage';
 import About from './components/About';
 import ProductDetails from './components/ProductDetails';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
@@ -23,7 +23,7 @@ function App() {
         <Route path='/product/:id' element={<ServiceDetails />} />
         <Route path='/newslist' element={<NewsList />} />
       </Routes>
-      <NewsPage />
+      {/* <NewsPage /> */}
       <ContactUs />
       <Footer />
     </BrowserRouter>

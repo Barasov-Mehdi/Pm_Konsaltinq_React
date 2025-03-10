@@ -1,0 +1,115 @@
+// General styling
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f3; // Changed background color for a softer look
+    margin: 0;
+    padding: 0;
+}
+
+// Container for the NewsList component
+.news-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px; // Added border radius to the container
+    background: #fff; // White background for the container
+
+    
+    .loading {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        margin: 70px ;
+
+    }
+
+
+    .select_option {
+        width: 120px;
+        border: 1px solid #2c3e50;
+        padding: 6px;
+        outline: none;
+
+    }
+
+    .select_option:hover {
+        padding: 6px;
+        background-color: rgb(97, 145, 235);
+        color: white;
+    }
+
+
+    .news-article {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); // Enhanced shadow for 3D effect
+        margin: 15px 0;
+        padding: 25px; // Increased padding for more space
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); // Hover shadow effect
+        }
+
+        // Header styling
+        .news-header {
+            margin-bottom: 10px;
+
+            h4 {
+                font-size: 1.4em;
+                color: #2c3e50; // Darker color for header
+                font-weight: bold;
+            }
+        }
+
+        // Content styling
+        .news-content {
+            margin-bottom: 10px;
+
+            h4 {
+                font-size: 1.1em;
+                color: #34495e;
+            }
+        }
+
+        // Author and date styling
+        .news-author,
+        .news-date {
+            font-size: 0.9em;
+            color: #7f8c8d; // Softer color for author/date
+            margin-bottom: 5px;
+
+            h4 {
+                margin: 0;
+            }
+        }
+    }
+
+    // Services section styling
+    h2 {
+        margin-top: 30px;
+        font-size: 1.8em; // Increased font size for prominence
+        color: #2c3e50;
+        text-align: center; // Center align heading
+    }
+
+    .cardsContainer {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center; // Center the service cards
+    }
+
+    .card_box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
