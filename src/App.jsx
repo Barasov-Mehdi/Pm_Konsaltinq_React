@@ -9,6 +9,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import ServiceDetails from './components/ServiceDetails';
 import ContactUs from './components/ContactUs';
+import NewsList from './components/NewsList';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/ProductDetails" element={<ProductDetails />} />
         <Route path='/About' element={<About />} />
         <Route path='/product/:id' element={<ServiceDetails />} />
+        <Route path='/newslist' element={<NewsList />} />
       </Routes>
       <NewsPage />
       <ContactUs />

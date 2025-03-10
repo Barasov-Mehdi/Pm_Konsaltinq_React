@@ -15,8 +15,6 @@ function Content() {
         { title: 'Poliqrafiya', imgSrc: Poliqrafiya },
     ];
 
-
-
     return (
         <div className='contentContainer'>
             <div className='textContainer'>
