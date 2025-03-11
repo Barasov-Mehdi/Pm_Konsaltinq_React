@@ -77,7 +77,7 @@ function NewsList() {
                 <option value="yearly">İllik</option>
             </select>
 
-            <div>
+            <div className='container_news_list'>
                 {isLoading ? (
                     <div className="loading-container">
                         <TailSpin className="loading" color="#3498db" />
