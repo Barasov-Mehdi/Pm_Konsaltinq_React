@@ -30,7 +30,7 @@ function NewsList() {
     }, [dispatch]);
 
     useEffect(() => {
-        setFilteredNews(news); // İlk yüklemede tüm haberleri göster
+        setFilteredNews(news); 
     }, [news]);
 
     const handleFilterChange = (event) => {
@@ -113,7 +113,7 @@ function NewsList() {
                 <div className="cardsContainer">
                     {services.map((service, index) => (
                         <div key={index}>
-                            <Link to="/ProductDetails">
+                            <Link to="/">
                                 <Card title={service.title} imgSrc={service.imgSrc} />
                             </Link>
                         </div>

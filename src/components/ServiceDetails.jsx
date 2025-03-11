@@ -24,7 +24,7 @@ function ServiceDetails() {
 
     const shareOnWhatsApp = () => {
         if (service) {
-            const message = `Salam! Bu xidməti sizinlə paylaşmaq istəyirəm: ${service.name}\nDaha ətraflı məlumat verərdiniz. ${window.location.href}`;
+            const message = `Salam! Bu xidməti ${service.name}\nDaha ətraflı məlumat verərdiniz. ${window.location.href}`;
             const phoneNumber = "+994513161354";
             const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
             window.open(url, "_blank");

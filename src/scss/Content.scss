@@ -1,6 +1,7 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+
 .contentContainer {
     width: 100%;
     display: flex;
@@ -16,7 +17,7 @@
         width: 100%;
         scrollbar-width: thin;
         scrollbar-color: #888 #f1f1f1;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Daha iyi bir gölge efekti
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         border-top-right-radius: 4%;
         border-bottom-right-radius: 4%;
         background-color: white;
@@ -43,6 +44,26 @@
             justify-content: center;
             padding: 0;
         }
+
+        .card {
+            opacity: 0; // Start hidden
+            transform: translateY(20px); // Start moved down
+            animation: slideInUp 0.5s forwards; // Add animation
+            
+            // Trigger animation when the component is loaded
+            &.visible {
+                opacity: 1; // Fully visible
+                transform: translateY(0); // Move to original position
+            }
+
+            &:nth-child(odd) {
+                animation-delay: 0.1s; // Stagger the animations
+            }
+
+            &:nth-child(even) {
+                animation-delay: 0.2s; // Stagger the animations
+            }
+        }
     }
 
     .textContainer {
@@ -53,14 +74,22 @@
         width: 100%;
         margin-bottom: 40px;
         background-color: transparent;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Daha iyi bir gölge efekti
-
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
         .textContent {
             width: 90%;
             max-width: 600px;
             padding: 20px;
             text-align: center;
+            opacity: 0; // Start hidden
+            transform: translateY(20px); // Start moved down
+            animation: fadeInUp 1s forwards; // Add animation
+
+            // Trigger animation when the component is loaded
+            &.visible {
+                opacity: 1; // Fully visible
+                transform: translateY(0); // Move to original position
+            }
 
             h1 {
                 position: relative;
@@ -106,6 +135,22 @@
             }
         }
     }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    // Remaining styles...
 
     .barMenu {
         width: 100%;
@@ -194,22 +239,18 @@
         }
     }
 
-
     @keyframes identifier {
         0% {
             transform: translateY(-3%);
         }
-
         100% {
             transform: translateY(0);
         }
     }
-
 }
 
 @media (max-width: 768px) {
     .contentContainer {
-
         .cardsContainer {
             display: flex;
             flex-wrap: nowrap;
@@ -228,11 +269,9 @@
             width: 100%;
             margin-bottom: 40px;
 
-
-
             .textContent {
                 width: 100%;
-                max-width: 600px; // Maksimum genişlik
+                max-width: 600px;
                 padding: 10px 20px 20px 0;
                 margin: 0;
                 background-color: rgba(255, 255, 255, 0.089);
