@@ -47,7 +47,7 @@ function ContactUs() {
                 </div>
                 <div className="info-item">
                     <h4>E-poçt:</h4>
-                    <p>12345@gmail.com</p>
+                    <p>test@gmail.com</p>
                 </div>
                 <div className="info-item">
                     <h4>Adres:</h4>

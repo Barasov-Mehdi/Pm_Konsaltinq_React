@@ -27,7 +27,7 @@ function Footer() {
           <FaFacebook />
         </a>
       </div>
-      <p>© 2023 Your Company Name. All Rights Reserved.</p>
+      <p>© 2025 PM Konsaltinq. All Rights Reserved.</p>
     </div>
   );
 }
