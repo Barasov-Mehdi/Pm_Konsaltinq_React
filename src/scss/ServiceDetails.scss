@@ -19,7 +19,7 @@
         cursor: pointer;
         margin-top: 15px;
         transition: background-color 0.3s ease;
-        width:23%;
+        width: 23%;
         display: flex;
         justify-content: center;
 
@@ -80,6 +80,25 @@
             text-align: center;
             padding: 10px;
             display: flex;
+        }
+
+        .whatsapp-btn {
+            background-image: linear-gradient(to right, #159957 0%, #155799 51%, #159957 100%);
+            color: white;
+            font-size: 16px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+            width: 33%;
+            display: flex;
+            justify-content: center;
+
+            &:hover {
+                background-image: linear-gradient(to right, #159957 0%, #155799 51%, #159957 100%)
+            }
         }
 
 

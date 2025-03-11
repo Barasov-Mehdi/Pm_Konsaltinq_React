@@ -22,14 +22,19 @@ function ContactUs() {
             message,
         };
 
-        // Redux action'ını çağırıyoruz
         try {
             await dispatch(postFeedBack(feedback));
             console.log("Feedback başarıyla gönderildi.");
+            alert('Göndərildi...')
         } catch (error) {
             console.error("Geri bildirim gönderme hatası:", error.response?.data || error.message);
             alert("Mesaj gönderilirken hata oluştu.");
         }
+
+        setName('')
+        setEmail('')
+        setNumber('')
+        setMessage('')
     };
 
     return (
