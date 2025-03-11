@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllServices } from '../slices/productSlice';
 import '../scss/ProductDetails.scss';
-
+import { Link } from 'react-router-dom';
 const ProductDetails = () => {
     const dispatch = useDispatch();
     const services = useSelector((state) => state.products.services);
@@ -20,7 +20,7 @@ const ProductDetails = () => {
     return (
         <div className="product-details">
             <h3>Xidmətlər</h3>
-            <div>
+            <div className="button-container">
                 <button onClick={() => vergiBtn('Vergi xidməti')}>Vergi</button>
                 <button onClick={() => vergiBtn('Mühasibat xidməti')}>Mühasibat</button>
                 <button onClick={() => vergiBtn('Mətbəə')}>Mətbəə</button>
@@ -29,20 +29,20 @@ const ProductDetails = () => {
             <ul>
                 {servicesGet.length > 0 ? (
                     servicesGet.map((service) => (
-                        <li key={service.id} className="product-card">
+                        <Link to={`/product/${service._id}`} key={service.id} className="product-card">
                             <img src={service.image} alt={service.name} />
                             <h2>{service.name}</h2>
-                            <p className="content">{service.description}</p>
-                        </li>
+                            {/* <p className="content">{service.description}</p> */}
+                        </Link>
                     ))
                 ) : (
                     (
                         services.map((service) => (
-                            <li key={service.id} className="product-card">
+                            <Link to={`/product/${service._id}`} key={service.id} className="product-card">
                                 <img src={service.image} alt={service.name} />
                                 <h2>{service.name}</h2>
-                                <p className="content">{service.description}</p>
-                            </li>
+                                {/* <p className="content">{service.description}</p> */}
+                            </Link>
                         ))
                     )
                 )}

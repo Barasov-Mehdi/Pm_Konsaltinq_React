@@ -1,10 +1,10 @@
 .product-details {
-    padding: 40px; // Increased padding for breathing space
+    padding: 40px; 
     display: flex;
     flex-direction: column;
-    align-items: center; // Center content horizontally
-    background-color: #f9f9f9; // Light background for contrast
-    min-height: 100vh; // Ensure full height view
+    align-items: center; 
+    min-height: 100vh; 
+    background: rgb(230, 238, 245);
 
     h1 {
         font-size: 24px;
@@ -13,25 +13,53 @@
         text-align: center;
     }
 
-    div {
-        margin: 20px 0;
+    .button-container {
+        display: flex;
+        gap: 10px;
+        padding: 10px 0;
+        width: 100%;
+        max-width: 600px; // Orta ve büyük ekranlar için genişlik sınırlaması
 
-        button {
-            background-color: #1c6b9c; // Primary button color
-            color: #fff; // Text color
-            border: none;
-            border-radius: 5px; // Rounded corners
-            padding: 10px 15px;
-            margin: 0 10px; // Margin between buttons
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            width: 110px;
+        @media (max-width: 768px) {
+            // Küçük ekranlarda yatay kaydırma aktif
+            overflow-x: auto;
+            justify-content: flex-start;
+            white-space: nowrap;
+            max-width: 100%;
 
-            &:hover {
-                background-color: #1c6b9c; // Darker shade on hover
+            &::-webkit-scrollbar {
+                height: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #1c6b9c;
+                border-radius: 10px;
             }
         }
+
+        @media (min-width: 769px) {
+            // Büyük ekranlarda tam ortada hizalama
+            justify-content: center;
+        }
     }
+
+    button {
+        flex: 0 0 auto;
+        background-color: #1c6b9c;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 110px;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: #15557a;
+        }
+    }
+
 
     ul {
         display: grid;
@@ -51,6 +79,7 @@
         text-align: center;
         padding: 20px; // Increased padding for better spacing
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        text-decoration: none;
 
         &:hover {
             transform: translateY(-5px);
@@ -78,4 +107,5 @@
             line-height: 1.5; // Improved line-height for better readability
         }
     }
+
 }

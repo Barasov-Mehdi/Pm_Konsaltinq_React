@@ -181,3 +181,11 @@ $hover-color: #ffcc00;
         flex-direction: column;
     }
 }
+
+@media (max-width:768px) {
+    .news-list {
+        box-shadow: 0px 9px 0px 6px #287aad;
+        border-bottom: 0.9px solid;
+        margin-bottom: 30px;
+    }
+}

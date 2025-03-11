@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { getAllServices } from '../slices/productSlice';
 import '../scss/ServiceDetails.scss';
 import { TailSpin } from 'react-loader-spinner';
-import { Link } from 'react-router-dom';
 
 function ServiceDetails() {
     const { id } = useParams();
@@ -23,6 +22,15 @@ function ServiceDetails() {
         }
     }, [services, id]);
 
+    const shareOnWhatsApp = () => {
+        if (service) {
+            const message = `Salam! Bu xidməti sizinlə paylaşmaq istəyirəm: ${service.name}\nDaha ətraflı məlumat verərdiniz. ${window.location.href}`;
+            const phoneNumber = "+994513161354";
+            const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        }
+    };
+
     return (
         <div className="service-details">
             {!service ? (
@@ -40,8 +48,12 @@ function ServiceDetails() {
                     <div>
                         <p>{service.description}</p>
                     </div>
+
                 </div>
             )}
+            <button className="whatsapp-btn" onClick={shareOnWhatsApp}>
+                Bizdən soruş
+            </button>
         </div>
     );
 }

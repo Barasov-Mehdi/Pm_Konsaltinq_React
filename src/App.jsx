@@ -10,6 +10,7 @@ import React from 'react';
 import ServiceDetails from './components/ServiceDetails';
 import ContactUs from './components/ContactUs';
 import NewsList from './components/NewsList';
+import Location from './components/Locations';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/About' element={<About />} />
         <Route path='/product/:id' element={<ServiceDetails />} />
         <Route path='/newslist' element={<NewsList />} />
+        <Route path='/locations' element={<Location />} />
       </Routes>
       {/* <NewsPage /> */}
       <ContactUs />

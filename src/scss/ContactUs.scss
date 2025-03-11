@@ -13,7 +13,7 @@ $contact-info-color: #007bff;
     padding: 30px;
     background: white;
     border-radius: 12px;
-    box-shadow: -19px 20px 0px 6px #287aad;
+    box-shadow: 0px 20px 0px 6px #3385b8;
     border-bottom: 0.9px solid;
 
     @media (max-width: 768px) {
@@ -57,7 +57,7 @@ $contact-info-color: #007bff;
     textarea {
         width: 100%;
         padding: 12px;
-        border: 1px solid #ccc;
+        border: 1px solid #3385b8;
         border-radius: 6px;
         font-size: 16px;
         transition: all 0.3s ease;
@@ -81,7 +81,7 @@ $contact-info-color: #007bff;
         font-weight: bold;
 
         &:hover {
-            background: $primary-color;
+            background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%)
         }
     }
 }

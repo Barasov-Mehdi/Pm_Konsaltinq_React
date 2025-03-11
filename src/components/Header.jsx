@@ -49,23 +49,18 @@ function Header() {
         setShowMenu(false)
     }
 
-    const scrollToBottom = () => {
-        if (bottomSectionRef.current) {
-            bottomSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
-        setShowMenu(false)
-    };
-
     return (
         <section className='containerHeader'>
             <header className='header_box'>
-                <img src={LOGO_MB} alt="Logo" />
+                <Link to='/'>
+                    <img src={LOGO_MB} alt="Logo" />
+                </Link>
                 <nav className='links_box'>
                     <Link onClick={closeMenuBox} to='/'>Əsas səhifə</Link>
                     <Link onClick={closeMenuBox} to='/About'>Haqqımızda</Link>
                     <Link onClick={closeMenuBox} to='/newslist'>Yeniliklər</Link>
                     <Link onClick={closeMenuBox} to='/ProductDetails'>Xidmətlər</Link>
-                    <Link onClick={scrollToBottom} to='/'>Ünvan</Link>
+                    <Link onClick={closeMenuBox} to='locations'>Ünvan</Link>
                 </nav>
                 <div className='icons_box'>
 
@@ -116,7 +111,7 @@ function Header() {
                         <Link onClick={closeMenuBox} to='/About'>Haqqımızda</Link>
                         <Link onClick={closeMenuBox} to='/newslist'>Yeniliklər</Link>
                         <Link onClick={closeMenuBox} to='/ProductDetails'>Xidmətlər</Link>
-                        <Link onClick={scrollToBottom} to='/'>Ünvan</Link>
+                        <Link onClick={closeMenuBox} to='locations'>Ünvan</Link>
                     </div>
                     <div className='barasBox'>
                         <p>BarasSoftWare</p>
