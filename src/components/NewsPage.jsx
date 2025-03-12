@@ -29,6 +29,8 @@ function NewsPage() {
                 <div className="extra-news-box">
                     <h3>PM Konsaltinq</h3>
                     <p>PM Konsaltinq olaraq, gürdüyümüz xidmətlərnən bağlı, ən son yeniliklərdən buradan xəbərdar ola bilərsiniz.</p>
+                    <br/>
+                    <p>Ən son yeniliklərdən xəbərdar olmaq üçün üzərinə basaraq xəbər səhifəsinə keçid edin.</p>
                 </div>
 
                 <Link to="/newslist" className='news_content_box'>

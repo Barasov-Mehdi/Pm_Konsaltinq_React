@@ -2,6 +2,7 @@ $primary-color: #3385b8;
 $background-light: #ffffff;
 $text-color: #333;
 $hover-color: #ffcc00;
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Maven+Pro:wght@400..900&family=Playwrite+HU:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 .news-container {
     width: 100%;
@@ -10,15 +11,17 @@ $hover-color: #ffcc00;
     align-items: center;
     margin: 25px 0;
     padding: 25px 0;
-    box-shadow: 0 2px 5px black;
-    background-color: $primary-color;
+    // box-shadow: 0 2px 5px black;
+    // background-color: $primary-color;
     border-radius: 10px;
+    // box-shadow: -1px -1px 0px 6px rgb(218, 215, 215);
+    background-color: white;
 
     h2 {
         text-align: center;
         font-size: 24px;
         margin-bottom: 20px;
-        color: white;
+        color: black;
     }
 
     .news-wrapper {
@@ -43,16 +46,15 @@ $hover-color: #ffcc00;
             width: 400px;
             padding: 20px;
             margin: 10px 30px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            background-color: $background-light;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
-            box-shadow: 0px 20px 0px 6px rgb(230, 228, 228);
-            border-bottom: 0.9px solid;
+            box-shadow: 0px 20px 0px 6px rgb(192, 190, 190);
+            // border-bottom: 0.9px solid;
             margin-bottom: 35px;
-
+            background-color: white;
+            // background-color: #eff1fd;
 
             .title {
                 text-align: center;
@@ -63,6 +65,9 @@ $hover-color: #ffcc00;
                 border-bottom: 0.1px solid black;
                 width: 140px;
                 margin-left: 105px;
+                font-family: "Fugaz One", sans-serif;
+                font-weight: 400;
+                font-style: normal;
             }
 
             .content {
@@ -71,6 +76,9 @@ $hover-color: #ffcc00;
                 margin-bottom: 10px;
                 color: $text-color;
                 border-bottom: 0.1px solid black;
+                font-family: "Fugaz One", sans-serif;
+                font-weight: 400;
+                font-style: normal;
 
             }
 
@@ -80,6 +88,9 @@ $hover-color: #ffcc00;
                 margin-bottom: 10px;
                 color: $text-color;
                 border-bottom: 0.1px solid black;
+                font-family: "Fugaz One", sans-serif;
+                font-weight: 400;
+                font-style: normal;
 
             }
 
@@ -88,6 +99,9 @@ $hover-color: #ffcc00;
                 font-size: 17px;
                 margin-bottom: 10px;
                 color: $text-color;
+                font-family: "Fugaz One", sans-serif;
+                font-weight: 400;
+                font-style: normal;
             }
 
             .news-icon-container {
@@ -124,25 +138,36 @@ $hover-color: #ffcc00;
         flex: 1;
         min-width: 400px;
         padding: 20px;
-        background-color: #f1f1f1;
+        // background-color: #f1f1f1;
         border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 1px 20px 5px rgb(192, 190, 190);
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         text-align: center;
-        height: 200px;
+        height: 400px;
+        background-color: white;
+
+
 
         h3 {
             font-size: 20px;
             margin-bottom: 10px;
             color: $text-color;
+            font-family: "Fugaz One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         p {
             font-size: 16px;
             color: $text-color;
+            font-family: "Fugaz One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 30px;
+
         }
     }
 

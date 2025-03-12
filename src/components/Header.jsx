@@ -1,6 +1,7 @@
 // Header.js
 import React, { useEffect, useRef, useState } from 'react';
 import LOGO_MB from '../assets/LOGO_MB.png';
+import LOGO_MB2 from '../assets/LOGO_MB2.png';
 import { IoSearchSharp } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 import { HiMiniXMark } from "react-icons/hi2";

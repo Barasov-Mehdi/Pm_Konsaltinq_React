@@ -41,16 +41,16 @@ function ContactUs() {
         <div className="contact-container">
             <div className="contact-info">
                 <div className="info-item">
-                    <h4>Telefon:</h4>
+                    <h4>Telefon ↷</h4>
                     <p>+994513161354</p>
                     <p>+994516141354</p>
                 </div>
                 <div className="info-item">
-                    <h4>E-poçt:</h4>
+                    <h4>E-poçt ↷</h4>
                     <p>test@gmail.com</p>
                 </div>
                 <div className="info-item">
-                    <h4>Adres:</h4>
+                    <h4>Adres ↷</h4>
                     <p>100 Heydər Əliyev prospekti, Zaqatala</p>
                 </div>
             </div>

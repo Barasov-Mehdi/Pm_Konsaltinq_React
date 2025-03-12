@@ -29,7 +29,7 @@ const ProductDetails = () => {
             <ul>
                 {servicesGet.length > 0 ? (
                     servicesGet.map((service) => (
-                        <Link to={`/product/${service._id}`} key={service.id} className="product-card">
+                        <Link to={`/service/${service._id}`} key={service.id} className="product-card">
                             <img src={service.image} alt={service.name} />
                             <h2>{service.name}</h2>
                             {/* <p className="content">{service.description}</p> */}
@@ -38,7 +38,7 @@ const ProductDetails = () => {
                 ) : (
                     (
                         services.map((service) => (
-                            <Link to={`/product/${service._id}`} key={service.id} className="product-card">
+                            <Link to={`/service/${service._id}`} key={service.id} className="product-card">
                                 <img src={service.image} alt={service.name} />
                                 <h2>{service.name}</h2>
                                 {/* <p className="content">{service.description}</p> */}

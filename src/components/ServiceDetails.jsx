@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
@@ -24,8 +25,8 @@ function ServiceDetails() {
 
     const shareOnWhatsApp = () => {
         if (service) {
-            const message = `Salam! Bu xidməti ${service.name}\nDaha ətraflı məlumat verərdiniz. ${window.location.href}`;
-            const phoneNumber = "+994513161354";
+            const message = `Salam! Bu ${service.name} xidməti haqqinda daha ətraflı danışardınız.`;
+            const phoneNumber = "+994513161354"; // Updated phone number
             const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
             window.open(url, "_blank");
         }
@@ -48,7 +49,6 @@ function ServiceDetails() {
                     <div>
                         <p>{service.description}</p>
                     </div>
-
                 </div>
             )}
             <button className="whatsapp-btn" onClick={shareOnWhatsApp}>

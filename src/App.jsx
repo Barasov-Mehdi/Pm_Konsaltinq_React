@@ -21,11 +21,12 @@ function App() {
         <Route path="/" element={<Content />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
         <Route path='/About' element={<About />} />
-        <Route path='/product/:id' element={<ServiceDetails />} />
+        <Route path="/service/:id" element={<ServiceDetails />} />
         <Route path='/newslist' element={<NewsList />} />
         <Route path='/locations' element={<Location />} />
       </Routes>
       {/* <NewsPage /> */}
+      {/* <WhyUs /> */}
       <ContactUs />
       <Footer />
     </BrowserRouter>

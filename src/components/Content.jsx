@@ -7,6 +7,7 @@ import Mətbəə from '../assets/Mətbəə.PNG';
 import Poliqrafiya from '../assets/Poliqrafiya.PNG';
 import { Link } from 'react-router-dom';
 import NewsPage from '../components/NewsPage';
+import WhyUs from './WhyUs';
 
 function Content() {
     const [isVisible, setIsVisible] = useState(false);
@@ -62,7 +63,7 @@ function Content() {
                     </div>
                 ))}
             </div>
-
+            <WhyUs />
             <NewsPage />
         </div>
     );
