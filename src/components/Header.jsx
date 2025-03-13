@@ -40,10 +40,12 @@ function Header() {
 
     const toggleSearchBox = () => {
         setShowSearch(prev => !prev);
+        setShowMenu(false)
     };
 
     const toggleMenuBox = () => {
         setShowMenu(prev => !prev);
+        setShowSearch(false)
     };
 
     const closeMenuBox = () => {

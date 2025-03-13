@@ -47,7 +47,7 @@ $hover-color: #ffcc00;
             padding: 20px;
             margin: 10px 30px;
             border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            // transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
             box-shadow: 0px 20px 0px 6px rgb(192, 190, 190);
@@ -55,6 +55,8 @@ $hover-color: #ffcc00;
             margin-bottom: 35px;
             background-color: white;
             // background-color: #eff1fd;
+            height: 400px;
+
 
             .title {
                 text-align: center;
@@ -65,9 +67,6 @@ $hover-color: #ffcc00;
                 border-bottom: 0.1px solid black;
                 width: 140px;
                 margin-left: 105px;
-                font-family: "Fugaz One", sans-serif;
-                font-weight: 400;
-                font-style: normal;
             }
 
             .content {
@@ -76,10 +75,7 @@ $hover-color: #ffcc00;
                 margin-bottom: 10px;
                 color: $text-color;
                 border-bottom: 0.1px solid black;
-                font-family: "Fugaz One", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-
+                font-style: italic;
             }
 
             .author {
@@ -87,11 +83,6 @@ $hover-color: #ffcc00;
                 font-size: 17px;
                 margin-bottom: 10px;
                 color: $text-color;
-                border-bottom: 0.1px solid black;
-                font-family: "Fugaz One", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-
             }
 
             .date {
@@ -155,17 +146,12 @@ $hover-color: #ffcc00;
             font-size: 20px;
             margin-bottom: 10px;
             color: $text-color;
-            font-family: "Fugaz One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
+           
         }
 
         p {
             font-size: 16px;
             color: $text-color;
-            font-family: "Fugaz One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
             margin-bottom: 30px;
 
         }

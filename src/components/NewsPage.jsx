@@ -18,7 +18,7 @@ function NewsPage() {
         setNewsPaper(news);
     }, [news]);
 
-    const lastTwoNews = newsPaper.slice(-2);
+    const lastTwoNews = newsPaper.slice(-1);
 
     return (
         <div className='news-container'>
