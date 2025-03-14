@@ -1,51 +1,51 @@
-.card {
-    flex: 0 0 auto; /* Prevents shrinking of the card */
-    background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Gradient background */
-    // border-radius: 12px;
-    margin: 10px; /* Adjust margin here as necessary */
-    max-width: 200px; /* Adjust the max width as necessary */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-    &:hover {
-        transform: translateY(-8px);
-        // box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .card-image {
-        width: 100%;
-        height: 175px; /* Consistent height */
-        object-fit: fill; /* Fit images nicely */
-        border-radius: 12px 12px 0 0;
-    }
-
-    .card-title {
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-        font-family: 'Poppins', sans-serif;
-        padding: 15px 10px;
-        background: #f1f1f1;
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-        text-align: center;
-        width: 100%;
-    }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-@media (max-width: 768px) {
-    .card {
-        max-width: 150px; /* Limit width further on small screens */
-        margin: 5px; /* Reduce margin further */
-        text-align: center; /* Center text on smaller cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 2rem;
+    width: 100%;
+}
 
-        .card-image {
-            height: 120px; /* Maintain height proportionate to new width */
-        }
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
 
-        .card-title {
-            font-size: 16px; /* Adjust font size for visibility */
-        }
-    }
+.card {
+    flex: 0 0 auto;
+    // border-radius: 12px;
+    margin: 10px;
+    /* Adjust margin here as necessary */
+    max-width: 200px;
+    /* Adjust the max width as necessary */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+.card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
 }

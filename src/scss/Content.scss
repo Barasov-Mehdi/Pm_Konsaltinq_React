@@ -45,28 +45,12 @@
             padding: 0;
         }
 
-        // .card {
-        //     opacity: 0; // Start hidden
-        //     transform: translateY(20px); // Start moved down
-        //     animation: slideInUp 0.5s forwards; // Add animation
-            
-        //     // Trigger animation when the component is loaded
-        //     &.visible {
-        //         opacity: 1; // Fully visible
-        //         transform: translateY(0); // Move to original position
-        //     }
-
-        //     &:nth-child(odd) {
-        //         animation-delay: 0.1s; // Stagger the animations
-        //     }
-
-        //     &:nth-child(even) {
-        //         animation-delay: 0.2s; // Stagger the animations
-        //     }
-        // }
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
-
-    h2{
+    h2 {
         color: black;
     }
 
@@ -125,7 +109,7 @@
                 padding: 0 10px;
             }
 
-            h2{
+            h2 {
                 color: black;
             }
         }
@@ -251,6 +235,7 @@
         0% {
             transform: translateY(-3%);
         }
+
         100% {
             transform: translateY(0);
         }

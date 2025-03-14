@@ -1,10 +1,13 @@
 import React from 'react';
 import '../scss/WhyUs.scss';
-import thinking from '../assets/question-mark-115632058837semwdcwhy.png'
+import thinking from '../assets/question-mark-115632058837semwdcwhy.jpg'
 // background-image: url('../assets/question-mark-115632058837semwdcwhy.png'); // SVG dosya yolunu ayarlayın
 function WhyUs() {
     return (
         <div className='whyus_container'>
+            <div className='image_section'>
+                <img className='icon' src={thinking} alt="" />
+            </div>
             <div className='text_section'>
                 <h2>Niyə PM Konsaltinq?</h2>
                 <p>
@@ -21,9 +24,7 @@ function WhyUs() {
                     dəstək olmaq bizim işimizin məqsədidir.
                 </p>
             </div>
-            <div className='image_section'>
-                <img className='icon' src={thinking} alt="" />
-            </div>
+
         </div>
     );
 }

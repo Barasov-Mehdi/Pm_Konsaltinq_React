@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #f8f9fa;
+    // background-color: #f8f9fa;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 20px auto;
@@ -22,38 +22,26 @@
         animation: fadeInUp 0.8s forwards;
         margin-bottom: 20px;
         position: relative;
+        margin: 0 5px;
 
         @media (min-width: 768px) {
             max-width: 60%;
             margin-bottom: 0;
 
-            &::before { // Büyük ekranlarda arka planı kaldır
+            &::before {
+                // Büyük ekranlarda arka planı kaldır
                 content: none;
                 opacity: 0;
                 display: none;
             }
         }
 
-        &::before { // Küçük ekranlarda arka plan
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('../assets/question-mark-115632058837semwdcwhy.png');
-            background-size: contain; // Görseli boyutlandır
-            background-repeat: no-repeat; // Tekrarı engelle
-            background-position: center; // Ortala
-            opacity: 0.5;
-            pointer-events: none;
-            z-index: -1;
-        }
+       
     }
 
     .image_section {
         max-width: 100%;
-        display: none; // Küçük ekranlarda gizli
+        display: flex; // Küçük ekranlarda gizli
         justify-content: center;
         opacity: 0;
         transform: translateY(20px);
@@ -73,9 +61,13 @@
 
     h2 {
         font-size: 24px;
-        color: #333;
+        color: white;
         margin-bottom: 10px;
         text-align: center; // Metni ortala
+        background-color: #3385b8;
+        padding: 5px 0;
+        border-radius: 50px;
+        width: auto;
     }
 
     p {
@@ -86,7 +78,9 @@
         opacity: 0;
         animation: fadeIn 0.5s forwards;
         animation-delay: 0.5s;
-        text-align: justify; // Metni yasla
+        text-align: start; // Metni yasla
+        font-style: oblique;
+
     }
 }
 
@@ -94,6 +88,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -104,6 +99,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
