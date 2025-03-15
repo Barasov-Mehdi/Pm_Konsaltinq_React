@@ -18,7 +18,6 @@ import MetbeePage from './components/CategoryPages/MetbeePage';
 import PoligrafiyaPage from './components/CategoryPages/PoligrafiyaPage';
 
 
-
 function App() {
 
   return (
