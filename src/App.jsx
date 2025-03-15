@@ -12,6 +12,13 @@ import ContactUs from './components/ContactUs';
 import NewsList from './components/NewsList';
 import Location from './components/Locations';
 
+import VergiPage from './components/CategoryPages/Vergi'
+import MuhasibatPage from './components/CategoryPages/MuhasibatPage';
+import MetbeePage from './components/CategoryPages/MetbeePage';
+import PoligrafiyaPage from './components/CategoryPages/PoligrafiyaPage';
+
+
+
 function App() {
 
   return (
@@ -24,6 +31,11 @@ function App() {
         <Route path="/service/:id" element={<ServiceDetails />} />
         <Route path='/newslist' element={<NewsList />} />
         <Route path='/locations' element={<Location />} />
+
+        <Route path='/vergi' element={<VergiPage />} />
+        <Route path='/muhasibat' element={<MuhasibatPage />} />
+        <Route path='/metbee' element={<MetbeePage />} />
+        <Route path='/poligrafiya' element={<PoligrafiyaPage />} />
       </Routes>
       {/* <NewsPage /> */}
       {/* <WhyUs /> */}

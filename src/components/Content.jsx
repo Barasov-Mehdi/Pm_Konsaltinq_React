@@ -57,9 +57,9 @@ function Content() {
             <div className='cardsContainer'>
                 {services.map((service, index) => (
                     <div key={index} className={`card ${isVisible ? 'visible' : ''}`}>
-                        <Link to="/ProductDetails">
-                            <Card title={service.title} imgSrc={service.imgSrc} />
-                        </Link>
+                        {/* <Link to="/ProductDetails"> */}
+                        <Card title={service.title} imgSrc={service.imgSrc} />
+                        {/* </Link> */}
                     </div>
                 ))}
             </div>
