@@ -5,8 +5,6 @@ $hover-color: #ffcc00;
 
 .news-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     max-width: 1200px;
     margin: 20px auto;
@@ -38,57 +36,43 @@ $hover-color: #ffcc00;
         }
     }
 
-    .container_news_list {
+    .news-table {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        border-collapse: collapse;
+        overflow-x: auto; // Horizontally scrollable for smaller screens
+        display: block; // Change display to block to enable scroll
+        
+        thead {
+            background-color: $primary-color;
+            color: white;
 
-        .news-article {
-            padding: 15px;
-            margin: 15px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 100%;
-            max-width: 500px;
-            overflow: hidden;
-
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            th {
+                padding: 12px;
+                text-align: left;
             }
+        }
 
-            .news-header {
-                h4 {
-                    font-size: 1.5em;
-                    color: $text-color;
-                    margin-bottom: 10px;
-                    transition: color 0.3s;
+        tbody {
+            .news-row {
+                &:hover {
+                    background-color: $hover-color; // Change color on hover
+                }
 
-                    &:hover {
-                        color: $hover-color; // Change color on hover
-                    }
+                td {
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    min-width: 100px; // Set a minimum width for cells to avoid cropping
                 }
             }
 
-            .news-content {
-                p {
-                    font-size: 1em;
-                    color: $text-color;
-                    margin: 5px 0;
+            tr {
+                td {
+                    transition: background-color 0.2s ease;
                 }
             }
 
-            .news-author,
-            .news-date {
-                p {
-                    font-size: 0.9em;
-                    color: $text-color;
-                    margin: 0;
-                }
+            td {
+                color: $text-color;
             }
         }
     }
@@ -138,20 +122,27 @@ $hover-color: #ffcc00;
             font-size: 1.5em;
         }
 
-        .container_news_list {
-            .news-article {
-                margin: 10px 0;
-                max-width: 100%; // Make full width on small screens
+        .news-table {
+            font-size: 0.9em;
+            display: block; // block to allow scrolling
+            overflow-x: auto; // enable horizontal scrolling
+
+            thead {
+                th {
+                    padding: 8px;
+                }
+            }
+
+            tbody {
+                .news-row {
+                    td {
+                        padding: 8px;
+                    }
+                }
             }
         }
 
         .card_box {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
             h2 {
                 margin-top: 30px;
                 font-size: 1.1em;

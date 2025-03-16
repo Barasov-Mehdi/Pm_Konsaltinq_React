@@ -1,25 +1,65 @@
-// About.scss
-
 .about-container {
     padding: 20px;
-    background-color: #f9f9f9; // Arxa fon
-    border-radius: 8px; // Künclərin yuvarlaqlaşdırılması
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Kölgə effekti
-    max-width: 800px; // Maksimum eni
-    margin: 20px auto; // Mərkəzə yerləşdirmək
-    font-family: 'Arial', sans-serif; // Şrift
+    background-color: #f9f9f9; // Background color
+    border-radius: 8px; // Rounded corners
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Shadow effect
+    max-width: 800px; // Maximum width
+    margin: 20px auto; // Centering
+    font-family: 'Arial', sans-serif; // Font
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center content
 }
 
-.about-container h1 {
-    font-size: 2rem; // Başlıq ölçüsü
-    color: #333; // Rəng
-    text-align: center; // Mərkəzə yerləşdirmək
-    margin-bottom: 20px; // Altında boşluq
+.about-header {
+    text-align: center; // Center text
+    margin-bottom: 20px; // Space below header
 }
 
-.about-container p {
-    font-size: 1.125rem; // Mətni daha böyük etmək
-    line-height: 1.5; // Sətir hündürlüyü
-    color: #555; // Yazı rəngi
-    margin-bottom: 15px; // Mətni ayırmaq üçün boşluq
+.about-header h1 {
+    font-size: 2.5rem; // Increased font size for header
+    color: #333; // Title color
+    text-transform: uppercase; // Make the title uppercase
+    letter-spacing: 1px; // Slight spacing for elegance
+}
+
+.about-content {
+    width: 100%; // Ensures full width
+    padding: 10px 15px; // Padding inside the content area
+}
+
+.about-content p {
+    font-size: 1.125rem; // Larger text size
+    line-height: 1.6; // Increased line height
+    color: #555; // Text color
+    margin-bottom: 20px; // Space between paragraphs
+}
+
+.about-footer {
+    margin-top: 30px; // Space above footer
+    text-align: center; // Center footer text
+}
+
+.footer-text {
+    font-size: 1rem; // Smaller text size for footer
+    color: #777; // Lighter color for footer text
+}
+
+// Responsive design adjustments
+@media (max-width: 600px) {
+    .about-container {
+        padding: 15px; // Decreased padding on small screens
+    }
+
+    .about-header h1 {
+        font-size: 2rem; // Smaller title on mobile
+    }
+
+    .about-content p {
+        font-size: 1rem; // Slightly smaller text size on mobile
+    }
+
+    .footer-text {
+        font-size: 0.9rem; //Responsive font size
+    }
 }

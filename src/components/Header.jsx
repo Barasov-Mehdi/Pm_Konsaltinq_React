@@ -26,13 +26,13 @@ function Header() {
 
     const searchBtn = () => {
         if (!searchInp.trim()) return;
-        const searchFilter = services.filter((e) => e.name.toLowerCase().includes(searchInp.toLowerCase()))
+        const searchFilter = services.filter((e) => e.description.toLowerCase().includes(searchInp.toLowerCase()))
         searchFilter
         setServiceArray(searchFilter);
     }
 
     const goProductDetails = (serviceId) => {
-        navigate(`/product/${serviceId}`);
+        navigate(`/service/${serviceId}`);
         setShowSearch(false);
         setSearchInp('');
         setServiceArray([])
@@ -60,9 +60,9 @@ function Header() {
                 </Link>
                 <nav className='links_box'>
                     <Link onClick={closeMenuBox} to='/'>Əsas səhifə</Link>
-                    <Link onClick={closeMenuBox} to='/About'>Haqqımızda</Link>
+                     <Link onClick={closeMenuBox} to='/About'>Haqqımızda</Link> 
                     <Link onClick={closeMenuBox} to='/newslist'>Yeniliklər</Link>
-                    <Link onClick={closeMenuBox} to='/ProductDetails'>Xidmətlər</Link>
+                    {/* <Link onClick={closeMenuBox} to='/ProductDetails'>Xidmətlər</Link> */}
                     <Link onClick={closeMenuBox} to='locations'>Ünvan</Link>
                 </nav>
                 <div className='icons_box'>
@@ -99,7 +99,7 @@ function Header() {
                         <section className='searchResults'>
                             {serviceArray.map((e) => (
                                 <div key={e._id} className='searchResultItem' onClick={() => goProductDetails(e._id)}>
-                                    <p>{e.name}</p>
+                                    <p>{e.description}</p>
                                 </div>
                             ))}
                         </section>
@@ -113,7 +113,7 @@ function Header() {
                         <Link onClick={closeMenuBox} to='/'>Əsas səhifə</Link>
                         <Link onClick={closeMenuBox} to='/About'>Haqqımızda</Link>
                         <Link onClick={closeMenuBox} to='/newslist'>Yeniliklər</Link>
-                        <Link onClick={closeMenuBox} to='/ProductDetails'>Xidmətlər</Link>
+                        {/* <Link onClick={closeMenuBox} to='/ProductDetails'>Xidmətlər</Link> */}
                         <Link onClick={closeMenuBox} to='locations'>Ünvan</Link>
                     </div>
                     <div className='barasBox'>
