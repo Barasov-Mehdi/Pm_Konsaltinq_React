@@ -15,12 +15,12 @@ function NewsList() {
     const news = useSelector((state) => state.allNews.news);
     const isLoading = useSelector((state) => state.allNews.isLoading);
 
-    const services = [
-        { title: 'Vergi', imgSrc: Vergi },
-        { title: 'Mühasibat', imgSrc: Muhasibat },
-        { title: 'Mətbəə', imgSrc: Mətbəə },
-        { title: 'Poliqrafiya', imgSrc: Poliqrafiya },
-    ];
+    // const services = [
+    //     { title: 'Vergi', imgSrc: Vergi },
+    //     { title: 'Mühasibat', imgSrc: Muhasibat },
+    //     { title: 'Mətbəə', imgSrc: Mətbəə },
+    //     { title: 'Poliqrafiya', imgSrc: Poliqrafiya },
+    // ];
 
     const [filteredNews, setFilteredNews] = useState([]);
     const [selectedDate, setSelectedDate] = useState(null);
@@ -107,7 +107,7 @@ function NewsList() {
                 </table>
             )}
 
-            <div className="card_box">
+            {/* <div className="card_box">
                 <h2>Xidmətlərimiz</h2>
                 <div className="cardsContainer">
                     {services.map((service, index) => (
@@ -118,7 +118,7 @@ function NewsList() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }
