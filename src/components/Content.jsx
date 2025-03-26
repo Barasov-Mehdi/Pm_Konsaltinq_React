@@ -8,6 +8,7 @@ import Poliqrafiya from '../assets/Poliqrafiya.PNG';
 import { Link } from 'react-router-dom';
 import NewsPage from '../components/NewsPage';
 import WhyUs from './WhyUs';
+import InfoPages from './InfoCards/InfoPages';
 
 function Content() {
     const [isVisible, setIsVisible] = useState(false);
@@ -64,6 +65,7 @@ function Content() {
                 ))}
             </div>
             <WhyUs />
+            <InfoPages />
             <NewsPage />
         </div>
     );

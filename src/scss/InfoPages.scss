@@ -1,0 +1,121 @@
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+
+    .info-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        height: 330px;
+        margin: 10px;
+        width: 250px;
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .info-card-img {
+            width: 100%;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .info-card-title {
+            padding: 15px;
+            font-size: 18px;
+            color: #333333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    .info-detail-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.952);
+        flex-direction: column;
+        z-index: 1000;
+        width: 100%;
+        overflow-x: hidden;
+
+        .info-close-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .info-detail-title {
+            margin-bottom: 12px;
+            font-size: 22px;
+            color: #ffffff;
+            text-align: initial;
+            margin-left: 20px;
+        }
+
+        .info-detail-content {
+            color: #ffffff;
+            padding: 20px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .info-close-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff5858;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+
+            &:hover {
+                background-color: #ff2c2c;
+            }
+        }
+    }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .info-card {
+        width: 90%;
+    }
+
+    .info-detail-box {
+        .info-detail-content {
+            max-height: 70vh;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .info-card {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .info-card {
+        width: 30%;
+    }
+
+    .info-detail-box {
+        .info-detail-content {
+            max-height: 80vh;
+        }
+    }
+}

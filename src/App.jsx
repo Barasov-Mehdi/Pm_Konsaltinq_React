@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 // import NewsPage from './components/NewsPage';
 import About from './components/About';
 // import ProductDetails from './components/ProductDetails';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import React from 'react';
 import ServiceDetails from './components/ServiceDetails';
 import ContactUs from './components/ContactUs';
@@ -17,11 +17,11 @@ import MuhasibatPage from './components/CategoryPages/MuhasibatPage';
 import MetbeePage from './components/CategoryPages/MetbeePage';
 import PoligrafiyaPage from './components/CategoryPages/PoligrafiyaPage';
 
-
+// import InfoPages from './components/InfoCards/InfoPages';
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Content />} />
@@ -38,9 +38,10 @@ function App() {
       </Routes>
       {/* <NewsPage /> */}
       {/* <WhyUs /> */}
+      {/* <InfoPages /> */}
       <ContactUs />
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
